@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DanLapteacru\FacetWpLocalJson;
 
 use DanLapteacru\FacetWpLocalJson\Admin\Notices\FacetWpPluginIsNotActive;
+use DanLapteacru\FacetWpLocalJson\Admin\Settings;
 
 /**
  * Class Plugin
@@ -17,6 +18,11 @@ final class Plugin
      * Holds the class instance.
      */
     private static ?Plugin $instance = null;
+
+    public function __construct()
+    {
+        Settings::init();
+    }
 
     /**
      * Plugin constructor.

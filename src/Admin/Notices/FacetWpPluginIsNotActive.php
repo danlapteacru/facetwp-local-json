@@ -27,6 +27,10 @@ class FacetWpPluginIsNotActive extends AbstractAdminNotice
      */
     public static function shouldDisplay(): bool
     {
+        if (! function_exists('is_plugin_active')) {
+            require_once ABSPATH . 'wp-admin/includes/plugin.php';
+        }
+
         return ! is_plugin_active('facetwp/index.php');
     }
 }
