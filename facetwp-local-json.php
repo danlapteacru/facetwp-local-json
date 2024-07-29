@@ -25,7 +25,7 @@ if (! defined('WPINC')) {
 if (file_exists(__DIR__ . '/vendor/autoload.php')) {
     require_once __DIR__ . '/vendor/autoload.php';
 } else {
-    spl_autoload_register(function ($class) {
+    spl_autoload_register(function ($class): void {
         $prefix = 'DanLapteacru\\FacetWpLocalJson\\';
         $base_dir = __DIR__ . '/src/';
         $len = strlen($prefix);

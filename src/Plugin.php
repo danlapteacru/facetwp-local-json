@@ -21,7 +21,8 @@ final class Plugin
 
     public function __construct()
     {
-        Settings::init();
+        Settings::run();
+        Sync::run();
     }
 
     /**

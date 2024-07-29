@@ -8,6 +8,8 @@ use FacetWP_Settings;
 
 class Settings
 {
+    public const ENABLE_FACETWP_LOCAL_JSON_FIELD_KEY = 'enable_facetwp_local_json';
+
     /**
      * Holds the class instance.
      */
@@ -40,7 +42,7 @@ class Settings
     /**
      * Initialize the class.
      */
-    public static function init(): self
+    public static function run(): self
     {
         if (null === static::$instance) {
             static::$instance = new self();
@@ -79,7 +81,7 @@ class Settings
         $this->defaults['facetwp_local_json'] = [
             'label' => esc_html__('Local JSON', 'facetwp-local-json'),
             'fields' => [
-                'enable_facetwp_local_json' => [
+                static::ENABLE_FACETWP_LOCAL_JSON_FIELD_KEY => [
                     'label' => esc_html__('Enable FacetWP Local JSON', 'facetwp-local-json'),
                     'notes' => esc_html__(
                         'Save FacetWP facets, templates and settings as .json files within your theme.',
