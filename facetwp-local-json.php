@@ -1,17 +1,17 @@
 <?php
 
 /**
- * Plugin Name:       FacetWP Local JSON
- * Plugin URI:        https://github.com/danlapteacru/facetwp-local-json/
+ * Plugin Name:       Local JSON for FacetWP
+ * Plugin URI:        https://wordpress.org/plugins/local-json-for-facetwp/
  * Description:       Saves FacetWP facets, templates and settings as .json files within your theme.
  * Version:           0.1.0
  * Requires at least: 5.5
  * Requires PHP:      8.1
- * Author:            Dan Lapteacru
+ * Author:            d1sabled - Dan Lapteacru
  * Author URI:        danlapteacru@gmail.com
  * License:           MIT
  * License URI:       https://opensource.org/licenses/MIT
- * Text Domain:       facetwp-local-json
+ * Text Domain:       local-json-for-facetwp
  */
 
 declare(strict_types=1);
